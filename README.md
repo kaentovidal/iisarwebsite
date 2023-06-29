@@ -9,10 +9,10 @@ Website using nodejs, bootstrap and postgresql
 
 ## Node packcage requirements
 
-First you need to install postgresql conector
+First you need to install expressjs and postgresql conector
 
 ```js 
-npm i pg
+npm i express pg
 ```
 Then we install Bootstrap 5.3.0 version for our frontend designs:
 ```js 
