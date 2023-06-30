@@ -8,6 +8,11 @@ app.use(require('./routes/index.js'))
 
 app.listen(3000)
 
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/login.html')
+})
+
 console.log("Server on port 3000");
 
 
