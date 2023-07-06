@@ -1,14 +1,21 @@
-const { Router } = require("express")
+import { Router } from 'express'
 const router =  Router()
 
-const {
-    getDate
-} = require('../controllers/index.controller')
+router.get("/", (req, res) => {
+  res.render('main');
+});
 
-router.get('/users', getDate)
+router.get("/login", (req, res) => {
+  res.render('login');
+});
+
+router.get("/register", (req, res) => {
+  res.render('register');
+});
 
 
-module.exports = router
+
+export default router
 
 
 
