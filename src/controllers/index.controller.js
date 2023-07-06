@@ -5,7 +5,7 @@ config();
 const { Pool } = pkg;
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL_EXT,
+    connectionString: process.env.DATABASE_URL,
     ssl: true
 })
 
@@ -19,6 +19,10 @@ export const getDate = async (req, res) => {
     return res.json(response.rows[0])
 }
 
+export const getUser = async (req, res) => {
+  const response = await pool.query("SELECT * FROM users");
+  return res.json(response.rows[0]);
+};
 
 
 

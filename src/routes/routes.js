@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import {getDate} from '../controllers/index.controller.js';
+import {getDate, getUser} from '../controllers/index.controller.js';
 
 const router = Router()
 
@@ -20,6 +20,7 @@ router.get("/register", (req, res) => {
 
 router.get("/ping", getDate)
 
+router.get("/user", getUser);
 
 
 export default router
