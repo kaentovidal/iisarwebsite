@@ -5,8 +5,8 @@ config();
 const { Pool } = pkg;
 
 export const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    //ssl: true // this u need to activate when u are in deploy mode
+    connectionString: process.env.DATABASE_URL_EXT,
+    ssl: true // this u need to activate when u are in deploy mode
 })
 
 export const getDate = async (req, res) => {

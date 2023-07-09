@@ -41,6 +41,9 @@ app.use("/views", express.static(join(__dirname, '/views')))
 app.use("/node_modules", express.static(join(__dirname, "../node_modules")));
 
 
+
+
+
 app.listen(app.get('port'));
 console.log('Server on port', app.get('port'));
 

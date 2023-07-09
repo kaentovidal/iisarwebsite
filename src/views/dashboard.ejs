@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body class="d-flex flex-row justify-content-between">
+    <aside class="d-flex flex-column align-items-start justify-content-end">
+      <nav class="navbar navbar-brand">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="./views/img/isotipo.jpg" alt="IISAR" width="200" />
+          </a>
+        </div>
+      </nav>
+      <input
+        type="button"
+        value="Agregar producto"
+        class="btn btn-success m-2"
+      />
+    </aside>
+
+    <main class="container-fluid position-relative">
+      <nav class="d-flex justify-content-between pt-2 gap-3">
+        <div >
+          <h2>Bienvenido</h2>
+        </div>
+        <div>
+          <a href="/login" class="btn btn-outline-danger">Salir</a>
+        </div>
+      </nav>
+    </main>
+  </body>
+</html>

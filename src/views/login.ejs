@@ -31,15 +31,15 @@
             <% }) %> <% } %>
           </ul>
 
-          <ul class="list">
+          <ul class=" ">
             <% if(messages.success_msg) { %>
             <li class="alert alert-success mt-2"><%= messages.success_msg %></li>
             <% } %>
           </ul>
 
-          <ul>
+          <ul class="list-group list-style-none">
             <% if (messages.error) { %>
-            <li><%= messages.error %></li>
+            <li class="alert alert-warning mt-2"><%= messages.error %></li>
             <% } %>
           </ul>
 
@@ -48,11 +48,11 @@
             <form action="/login" method="post">
               <div class="mb-4">
                 <label for="email" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" />
+                <input type="email" class="form-control" name="email"/>
               </div>
               <div class="mb-4">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" />
+                <input type="password" class="form-control" name="password"/>
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary">

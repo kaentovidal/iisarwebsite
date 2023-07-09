@@ -1,5 +1,6 @@
 import { Router } from 'express'
-import {getDate, getUser, pool} from '../controllers/index.controller.js';
+import { getDate, getUser, pool } from '../controllers/index.controller.js';
+import { initialize } from "../passport/auth.js";
 import encrypt from "bcrypt";
 import passport from 'passport';
 
@@ -10,6 +11,10 @@ const router = Router()
 
 router.get("/", (req, res) => {
   res.render('main');
+});
+
+router.get("/dash", (req, res) => {
+  res.render('dashboard');
 });
 
 router.get("/login", (req, res) => {
@@ -97,10 +102,18 @@ router.post("/signup", async (req, res) => {
 
 router.post("/login",
   passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/user",
+    successRedirect: "/dash",
+    failureRedirect: "/login",
     failureFlash: true
   }))
+
+
+
+router.get("/logout", (req, res) => {
+  req.logOut();
+  req.flash('success_msg', "Se ha cerrado sesión")
+  res.redirect("/login")
+})
 
 router.get("/ping", getDate)
 
