@@ -4,15 +4,10 @@ config();
 
 const { Pool } = pkg;
 
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    //ssl: true
+export const pool = new Pool({
+    connectionString: process.env.DATABASE_URL_EXT,
+    ssl: true // this u need to activate when u are in deploy mode
 })
-
-// const getUsers = async (req, res) => {
-//     const response = await pool.query('SELECT * FROM conductor')
-//     res.status(200).json(response.rows)
-// }
 
 export const getDate = async (req, res) => {
     const response = await pool.query('SELECT NOW()')
