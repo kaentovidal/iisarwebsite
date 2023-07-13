@@ -27,15 +27,30 @@
           </div>
         </div>
       </nav>
+ 
+<div class="row">
+       <%results.forEach((p)=> {%>
 
-      <div class="card" style="width: 18rem">
-        <img src="https://hips.hearstapps.com/hmg-prod/images/coco-mademoiselle-perfume-chanel-1675113242.png" class="card-img-top" alt="item" />
-        <div class="card-body">
-          <h5 class="card-title" name>Producto 1</h5>
-          <p class="card-text">Descripcion del producto.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
-        </div>
+      
+  <div class="col">
+    <div class="card mt-5" style="width: 20rem;">
+      <div class="card-body">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/coco-mademoiselle-perfume-chanel-1675113242.png" class="card-img-top" alt="item" style="width: 18rem;" />
+        <h5 class="card-title"><%= p.product_name%></h5>
+        <p class="card-text"><%= p.product_detail%></p>
+        <a href="#" class="btn btn-primary">Más informacion</a>
       </div>
+    </div>
+  </div>
+  
+     
+
+
+       <%})%> 
+       </div>
+
+
+
     </main>
   </body>
 </html>

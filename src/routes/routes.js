@@ -11,7 +11,13 @@ const router = Router()
 
 
 router.get("/", (req, res) => {
-  res.render('main');
+  pool.query("SELECT * FROM product", (err, results) => {
+    if (err) {
+      throw err;
+    } else {
+      res.render("main", { results: results.rows });
+    }
+  });
 });
 
 router.get("/dash", (req, res) => {
