@@ -1,7 +1,11 @@
-<%- include("templates/hearder", {titulo: "Inicio"})%>
-  <body>
+<%- include("templates/hearder", {titulo: "Resultados de Busqueds"})%>
+
+<body>
     <main class="container">
-      <h1 class="text-center pt-5">IISAR</h1>
+        <a href="/">
+            <h1 class="text-center pt-5">IISAR</h1>
+        </a>
+      
       <p class="text-center">Encuentra productos de la localidad</p>
 
       <nav class="navbar navbar-expand-lg mb-5" >
@@ -26,11 +30,13 @@
           </div>
         </div>
       </nav>
+
+
  
 <div class="row">
-       <%results.forEach((p)=> {%>
-
       
+    <%results.forEach((p)=> {%>
+  
   <div class="col">
     <div class="card mt-5" style="width: 20rem;">
       <div class="card-body">
@@ -42,14 +48,13 @@
     </div>
   </div>
   
-     
-
-
-       <%})%> 
+    <%})%> 
        </div>
 
 
 
     </main>
   </body>
+
+
 </html>
