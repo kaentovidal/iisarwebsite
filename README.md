@@ -25,6 +25,7 @@ then, you need to install all the requirementes package with the following comma
 ```bash
 npm install
 ```
-
+# adding required enviroments variables
+* For that you need to create a file *.env* y add the key link
 
 

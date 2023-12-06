@@ -4,7 +4,7 @@ import { pool } from "../controllers/index.controller.js";
 
 
 export const main = (req, res) => {
-  pool.query("SELECT * FROM product", (err, results) => {
+  pool.query("SELECT NOW()", (err, results) => {
     if (err) {
       throw err;
     } else {
